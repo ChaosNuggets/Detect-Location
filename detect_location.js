@@ -1,19 +1,15 @@
 function ipLookUp () {
-  $.ajax('//ip-api.com/json')
-  .then(
-      function success(response) {
-        console.log('User\'s Location Data is ', response);
-        console.log('User\'s Country', response.country);
-        document.getElementById(`text`).innerHTML =
-        response.lat + 
-        ', ' + response.lon;
-      },
+  /* Add "https://api.ipify.org?format=json" statement
+  this will communicate with the ipify servers in
+  order to retrieve the IP address $.getJSON will
+  load JSON-encoded data from the server using a
+  GET HTTP request */
 
-      function fail(data, status) {
-          console.log('Request failed.  Returned status of',
-                      status);
-      }
-  );
+  $.getJSON("https://api.ipify.org?format=json", function(data) {
+
+    // Setting text of element P with id gfg
+    $('text').html(data.ip);
+  })
 }
 
 
