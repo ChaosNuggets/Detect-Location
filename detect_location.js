@@ -4,7 +4,7 @@ function ipLookUp () {
       function success(response) {
         console.log('User\'s Location Data is ', response);
         console.log('User\'s Country', response.country);
-        document.getElementById(`text1`).innerHTML =
+        document.getElementById(`text`).innerHTML =
         response.lat + 
         ', ', response.lon;
       },
@@ -21,11 +21,11 @@ if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(
       function success(position) {
         // for when getting location is a success
-        document.getElementById(`text1`).innerHTML =
+        document.getElementById(`text`).innerHTML =
         position.coords.latitude + 
         ', ', position.coords.longitude;
       },
-      
+
       function error(error_message) {
         // for when getting location results in an error
         console.error('An error has occured while retrieving' +
