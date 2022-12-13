@@ -6,7 +6,7 @@ function ipLookUp () {
         console.log('User\'s Country', response.country);
         document.getElementById(`text`).innerHTML =
         response.lat + 
-        ', ', response.lon;
+        ', ' + response.lon;
       },
 
       function fail(data, status) {
@@ -23,7 +23,7 @@ if ("geolocation" in navigator) {
         // for when getting location is a success
         document.getElementById(`text`).innerHTML =
         position.coords.latitude + 
-        ', ', position.coords.longitude;
+        ', ' + position.coords.longitude;
       },
 
       function error(error_message) {
