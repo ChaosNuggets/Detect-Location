@@ -1,5 +1,5 @@
 function ipLookUp () {
-  $.ajax('http://ip-api.com/json')
+  $.ajax('//ip-api.com/json')
   .then(
       function success(response) {
         console.log('User\'s Location Data is ', response);
@@ -15,6 +15,8 @@ function ipLookUp () {
       }
   );
 }
+
+
 
 if ("geolocation" in navigator) {
   // check if geolocation is supported/enabled on current browser
