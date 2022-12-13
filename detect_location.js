@@ -8,7 +8,7 @@ GET HTTP request */
 $.getJSON("https://api.ipify.org?format=json", function(data) {
 
   // Setting text of element P with id gfg
-  document.getElementById(`location`).innerHTML = data.ip;
+  document.getElementById(`ipAddress`).innerHTML = data.ip;
 })
 
 
